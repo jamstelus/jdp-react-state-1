@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useCallback } from "react";
 
 function DynamicObjectForm({ fields, onSubmit }) {
   const [objectValues, setObjectValues] = useState(() => {
@@ -34,10 +35,10 @@ function DynamicObjectForm({ fields, onSubmit }) {
     setNewFieldType("text");
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = useCallback((e) => {
     e.preventDefault();
     onSubmit(objectValues);
-  };
+  }, []);
 
   return (
     <form onSubmit={handleSubmit}>

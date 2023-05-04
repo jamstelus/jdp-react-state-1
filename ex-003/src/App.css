@@ -36,3 +36,22 @@
     transform: rotate(360deg);
   }
 }
+
+
+.Layout {
+  display: flex;
+  flex-direction: row;
+  background-color: #f3f3f3;
+}
+
+.Content {
+  padding: 2rem;
+}
+
+.Navigation {
+  padding: 1rem;
+  background-color: #d2f2f0;
+  color: white;
+  width: 20%;
+  height: 100vh;
+}
